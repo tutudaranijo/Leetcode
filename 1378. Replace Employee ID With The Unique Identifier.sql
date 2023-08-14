@@ -69,5 +69,8 @@ The unique ID of Jonathan is 1. */
 
 select Employees.name, EmployeeUNI.unique_id
 from Employees
-left join  EmployeeUNI
+left join  EmployeeUNI 
+/* 
+* left join because you want all the empolyees names
+ */
 on Employees.id = EmployeeUNI.id
