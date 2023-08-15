@@ -70,7 +70,9 @@ Customer with id = 54 visited the mall three times. During 2 visits they did not
 Customer with id = 96 visited the mall once and did not make any transactions.
 As we can see, users with IDs 30 and 96 visited the mall one time without making any transactions. Also, user 54 visited the mall twice and did not make any transactions.*/
 
-select customer_id, COUNT(Visits.visit_id) as count_no_trans 
+select customer_id, COUNT(Visits.visit_id) as count_no_trans /* 
+! count is counting the amout of visit by each customer id
+ */
 from Visits
 left join Transactions
 on Visits.visit_id = Transactions.visit_id
